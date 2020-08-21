@@ -5,7 +5,7 @@ import com.pluralsight.tddjunit5.airport.Flight;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
+import org.mockito.Spy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +17,7 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class StatisticsTest {
-    @Mock
+    @Spy
     private Database database;
 
     private List<List<String>> queriedData;
