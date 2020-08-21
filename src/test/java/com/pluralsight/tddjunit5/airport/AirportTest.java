@@ -1,9 +1,6 @@
 package com.pluralsight.tddjunit5.airport;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -143,6 +140,7 @@ class AirportTest {
         class VipPassenger {
 
             @Test
+            @Disabled
             @DisplayName("Then you can add and remove him from a premium flight")
             public void testPremiumFlightVipPassenger() {
                 assertAll("Verify all conditions for a VIP passenger and a premium flight",
