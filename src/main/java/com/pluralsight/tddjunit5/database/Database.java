@@ -1,6 +1,8 @@
 package com.pluralsight.tddjunit5.database;
 
 
+import com.pluralsight.tddjunit5.airport.Flight;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,5 +23,17 @@ public class Database {
 
     public List<List<String>> queryFlightsDatabase() {
         return queriedData;
+    }
+
+    public double averageDistance(List<Flight> flightsList) {
+        return 0.0;
+    }
+
+    public int minimumDistance(List<Flight> flightsList) {
+        return 0;
+    }
+
+    public int maximumDistance(List<Flight> flightsList) {
+        return 0;
     }
 }
