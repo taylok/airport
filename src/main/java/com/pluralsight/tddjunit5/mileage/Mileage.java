@@ -19,10 +19,20 @@ public class Mileage {
     }
 
     public void addMilage(Passenger passenger, int miles) {
-
+        if (passengersMilageMap.containsKey(passenger)) {
+            passengersMilageMap.put(passenger, passengersMilageMap.get(passenger) + miles);
+        } else {
+            passengersMilageMap.put(passenger, miles);
+        }
     }
 
     public void calculateGivenPoints() {
-
+        for (Passenger passenger : passengersMilageMap.keySet()) {
+            if (passenger.isVip()) {
+                passengersPointsMap.put(passenger, passengersMilageMap.get(passenger)/ VIP_FACTOR);
+            } else {
+                passengersPointsMap.put(passenger, passengersMilageMap.get(passenger)/ USUAL_FACTOR);
+            }
+        }
     }
 }
