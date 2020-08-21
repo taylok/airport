@@ -1,5 +1,7 @@
 package com.pluralsight.tddjunit5.database;
 
+import java.util.Objects;
+
 public class Credentials {
 
     private String username;
@@ -26,4 +28,17 @@ public class Credentials {
         this.password = password;
     }
 
+    @Override
+    public boolean equals( Object o ) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Credentials that = (Credentials) o;
+        return Objects.equals(username, that.username) &&
+                Objects.equals(password, that.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username, password);
+    }
 }
