@@ -26,14 +26,23 @@ public class Database {
     }
 
     public double averageDistance(List<Flight> flightsList) {
-        return 0.0;
+        return flightsList.stream()
+                .mapToDouble(Flight::getDistance)
+                .average()
+                .getAsDouble();
     }
 
     public int minimumDistance(List<Flight> flightsList) {
-        return 0;
+        return flightsList.stream()
+                .mapToInt(Flight::getDistance)
+                .min()
+                .getAsInt();
     }
 
     public int maximumDistance(List<Flight> flightsList) {
-        return 0;
+        return flightsList.stream()
+                .mapToInt(Flight::getDistance)
+                .max()
+                .getAsInt();
     }
 }
