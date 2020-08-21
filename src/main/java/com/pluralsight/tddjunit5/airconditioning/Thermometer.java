@@ -6,7 +6,10 @@ public class Thermometer {
     private Sensor sensor;
 
     public double getTemperature() {
-        return 0;
+        if (sensor.isBlocked()) {
+            throw new RuntimeException("Sensor is blocked");
+        }
+        return temperature;
     }
 
     public void setTemperature(double temperature) {
