@@ -140,7 +140,6 @@ class AirportTest {
         class VipPassenger {
 
             @Test
-            @Disabled
             @DisplayName("Then you can add and remove him from a premium flight")
             public void testPremiumFlightVipPassenger() {
                 assertAll("Verify all conditions for a VIP passenger and a premium flight",
