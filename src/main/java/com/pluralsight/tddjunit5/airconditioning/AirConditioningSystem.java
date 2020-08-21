@@ -11,7 +11,7 @@ public class AirConditioningSystem {
     }
 
     public void checkAirConditioningSystem() {
-
+        this.open = (thermometer.getTemperature() >= temperatureThreshold);
     }
 
     public boolean isOpen() {
